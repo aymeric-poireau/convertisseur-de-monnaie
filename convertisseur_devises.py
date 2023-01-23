@@ -7,6 +7,10 @@ EUR = 1.17
 RUP = 83.87
 PES = 25.68
 
+label = tk.Label()
+label.grid()
+
+
 fenetre = Tk()
 fenetre.title("Convertisseur monney")
 fenetre.config(bg = "#87CEEB")
@@ -38,6 +42,14 @@ l.pack()
 e.pack()
 d.pack()
 s.pack
+
+
+def clear():
+    label.config(text="")
+    
+tk.Button(text="clear", command=clear).grid()
+
+
 fenetre.mainloop()
 
 def action(event):
